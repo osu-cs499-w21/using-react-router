@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -26,7 +27,17 @@ function Menu() {
 
 function App() {
   return (
-    <Home />
+    <Switch>
+      <Route path="/about/people">
+        <People />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
   );
 }
 
